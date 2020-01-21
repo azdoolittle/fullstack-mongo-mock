@@ -101,3 +101,6 @@ typings/
 
 # TernJS port file
 .tern-port
+
+# seed file for fake data
+seed.js

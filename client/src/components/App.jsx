@@ -13,14 +13,24 @@ export default class App extends React.Component {
     }
 
   }
+  componentDidMount() {
+    axios.get('/products')
+      .then((res) => {
+        this.setState(res);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(`compDidMount err:`, err)
+      })
+  }
 
   render(){
-  
+
     return(
       <div>
         <div>
           <h1>EBID</h1>
-          <h3>The jankiest ebay rip-off you'll ever see (probably)</h3>
+          <h3>The jankiest ebay rip-off you'll ever see (probably)APP.JSX</h3>
         </div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">

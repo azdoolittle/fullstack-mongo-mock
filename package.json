@@ -7,7 +7,10 @@
     "build": "webpack -w",
     "start": "nodemon"
   },
-  "repository": "https://github.com/atk1213/fullstack-mongo-mock",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atk1213/fullstack-mongo-mock.git"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
@@ -28,5 +31,11 @@
     "babel-loader": "^8.0.5",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/atk1213/fullstack-mongo-mock/issues"
+  },
+  "homepage": "https://github.com/atk1213/fullstack-mongo-mock#readme",
+  "keywords": [],
+  "author": ""
 }
