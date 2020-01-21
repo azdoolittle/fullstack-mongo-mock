@@ -9,15 +9,16 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      products: [],
+      currentProduct: null
     }
 
   }
   componentDidMount() {
     axios.get('/products')
       .then((res) => {
-        this.setState(res);
-        console.log(res.data);
+        this.setState({products:res.data});
+        console.log('res.data: ', res.data);
       })
       .catch((err) => {
         console.log(`compDidMount err:`, err)
@@ -25,7 +26,7 @@ export default class App extends React.Component {
   }
 
   render(){
-
+    let products = this.state.products
     return(
       <div>
         <div>
@@ -42,7 +43,7 @@ export default class App extends React.Component {
             <ProductViewer />
           </div>
           <div className="col-md-5 product-list-container">
-            <ProductList  />
+            <ProductList products={this.state.products}/>
           </div>
         </div>
       </div>

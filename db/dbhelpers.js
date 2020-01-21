@@ -3,7 +3,7 @@ var Product = require('./');
 var helpers = {
   getProductsHelper: (callback) => {
     Product.find(callback)
-    console.log('db getProdHelper results:');
+    console.log('db getProdHelper cb:', callback);
   },
   postProductsHelper: () => {},
   updateProductHelper: () => {},

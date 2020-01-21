@@ -9,7 +9,8 @@ const controller = {
       if (err) {
         console.err('ctrl get helper:', err);
       }
-      res.status(200).send(docs);
+      res.status(200);
+      res.json(docs);
     })
   },
   post: (req, res) => {},
